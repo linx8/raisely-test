@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
+import fetcher from "./fetcher";
+
 import "./App.scss";
 
 function App() {
@@ -38,16 +40,6 @@ function App() {
       // Clear status after sometime
       setStatus(null);
     }, 5000);
-  };
-
-  const fetcher = async (url, data) => {
-    return await fetch(url, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json;charset=utf-8"
-      },
-      body: JSON.stringify(data)
-    });
   };
 
   const validateEmail = async email => {

@@ -1,6 +1,10 @@
+// variables
+
 $c-primary: #5b41d0;
 $c-red: #f52f0c;
 $global-transition: 150ms ease-in-out;
+
+// globals
 
 html > * {
   font-family: monospace;
@@ -11,6 +15,14 @@ html > * {
   margin-top: 15vh;
   padding: 0 40px;
 }
+
+// utils
+
+.u-hidden {
+  display: none;
+}
+
+// components
 
 .c-title {
   font-size: 18px;
@@ -58,10 +70,6 @@ html > * {
   display: block;
   text-align: left;
   margin: 4px 0 8px;
-}
-
-.u-hidden {
-  display: none;
 }
 
 .c-submit {
