@@ -61,7 +61,7 @@ function App() {
     const responseJSON = await response.json();
 
     if (responseJSON.data.status === "EXISTS")
-      return "Email already registered.";
+      return "Email already registered, choose a new email.";
 
     return responseJSON.data.status === "OK";
   };
