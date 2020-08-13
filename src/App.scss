@@ -1,0 +1,87 @@
+$c-primary: #5b41d0;
+$c-red: #f52f0c;
+$global-transition: 150ms ease-in-out;
+
+html > * {
+  font-family: monospace;
+  font-size: 14px;
+}
+
+.App {
+  margin-top: 15vh;
+  padding: 0 40px;
+}
+
+.c-title {
+  font-size: 18px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.c-form {
+  margin: 0 auto;
+  max-width: 100%;
+  text-align: center;
+  width: 400px;
+
+  &__fields {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    li {
+      // margin-bottom: 15px;
+      min-height: 50px;
+    }
+  }
+
+  input {
+    border-radius: 4px;
+    border: 1px solid $c-primary;
+    box-sizing: border-box;
+    font-family: monospace;
+    font-size: 14px;
+    padding: 4px;
+    width: 100%;
+
+    &[invalid="true"] {
+      border: 1px solid $c-red;
+    }
+  }
+}
+
+.c-error {
+  font-size: 11px;
+  color: $c-red;
+  display: block;
+  text-align: left;
+  margin: 4px 0 8px;
+}
+
+.u-hidden {
+  display: none;
+}
+
+.c-submit {
+  font-family: monospace;
+  border: none;
+  background-color: $c-primary;
+  padding: 12px 24px;
+  color: #fff;
+  border-radius: 18px;
+  font-weight: 600;
+  transition: border-radius $global-transition;
+
+  &:disabled {
+    opacity: 0.8;
+    pointer-events: none;
+  }
+
+  &:hover {
+    cursor: pointer;
+    border-radius: 12px;
+    box-shadow: #ddd 0px 2px 6px 0px;
+  }
+}
